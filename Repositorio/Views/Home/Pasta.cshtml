@@ -1,0 +1,20 @@
+﻿@model Repositorio.Metodos.Abstracao.Pasta
+    
+<div class="row">
+    @foreach (var Pasta in Model.Pastas)
+    {
+        <div class="col-3">
+            <button class="btn btn-sm Diretorio" Caminho="@Pasta.Caminho"><i class="fa fa-folder" aria-hidden="true"></i> @Pasta.Titulo</button>
+        </div>
+    }
+
+    @foreach (var Arquivo in Model.Arquivos)
+    {
+        <div class="col-3">
+            <button class="btn btn-sm" Caminho="@Arquivo.Caminho"><i class="fa fa-file" aria-hidden="true"></i> @Arquivo.Titulo</button>
+        </div>
+    }   
+</div>
+<script>
+    $('#ModalHeader').html('<div class="modal-header"><h5><i class="fa fa-folder" aria-hidden="true"></i> @Model.Titulo</h5></div>')
+</script>

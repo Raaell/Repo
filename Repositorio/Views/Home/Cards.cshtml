@@ -1,0 +1,19 @@
+﻿@model IEnumerable<Repositorio.Metodos.Abstracao.Card>
+<div class="row py-5">
+    @foreach (var Card in Model)
+    {
+        <div class="p-4 col-12 col-md-4 Pasta" Diretorio="@Card.Caminho">
+            <div class="card" style="cursor:pointer;">               
+                <a class="img-card">
+                    <img style="max-height:500px;" src="@Url.Content(Card.Imagem)">
+                </a>
+                <div class="card-content">
+                    <h4 class="card-title">
+                        <a><i class="fa fa-file-image-o" aria-hidden="true"></i> @Card.Titulo</a>
+                    </h4>                                        
+                </div>                
+            </div>
+        </div>
+
+    }
+</div>
